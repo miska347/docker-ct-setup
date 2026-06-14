@@ -20,13 +20,13 @@ EOF
 sudo apt update
 sudo apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
-# 5. Docker palveluiden aktivointi
+# 3. Docker palveluiden aktivointi
 sudo systemctl enable --now docker.service
 sudo systemctl enable --now containerd.service
 
-# 6. Asennuksen tarkistus
+# 4. Asennuksen tarkistus
 sudo systemctl is-active docker
 
-# 7. Käyttäjäoikeudet
+# 5. Käyttäjäoikeudet
 sudo groupadd -f docker
 sudo usermod -aG docker $USER
